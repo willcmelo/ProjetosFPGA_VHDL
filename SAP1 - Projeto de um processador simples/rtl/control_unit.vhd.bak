@@ -1,0 +1,49 @@
+-- Quartus Prime VHDL Template
+-- Binary Counter
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity control_unit is
+
+	generic
+	(
+		MIN_COUNT : natural := 0;
+		MAX_COUNT : natural := 5
+	);
+
+	port
+	(
+		clk		  : in std_logic;
+		opcode	  : in std_logic_vector(3 downto 0);
+		reset	     : out std_logic;
+		cw		     : out std_logic_vector(11 downto 0);
+	);
+
+end entity;
+
+architecture rtl of control_unit is
+begin
+
+	process (clk)
+		variable   cnt		   : integer range MIN_COUNT to MAX_COUNT;
+	begin
+		if (rising_edge(clk)) then
+
+			if reset = '1' then
+				-- Reset the counter to 0
+				cnt := 0;
+
+			elsif enable = '1' then
+				-- Increment the counter if counting is enabled			   
+				cnt := cnt + 1;
+
+			end if;
+		end if;
+
+		-- Output the current count
+		q <= cnt;
+	end process;
+
+end rtl;

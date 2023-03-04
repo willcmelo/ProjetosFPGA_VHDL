@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Apr 13 22:54:09 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : SAP1
+Top-level Entity Name : SAP1
+Family : Cyclone IV E
+Device : EP4CE30F23C7
+Timing Models : Final
+Total logic elements : 107 / 28,848 ( < 1 % )
+    Total combinational functions : 103 / 28,848 ( < 1 % )
+    Dedicated logic registers : 43 / 28,848 ( < 1 % )
+Total registers : 43
+Total pins : 18 / 329 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
